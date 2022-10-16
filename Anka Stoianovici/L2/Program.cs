@@ -8,7 +8,7 @@ entity type pentru a reprezenta căruciorul de cumpărături, clientul*/
 using L2.Domain;
 using System;
 using System.Collections.Generic;
-using static L2.Domain.StariCos;
+using static L2.Domain.StareCos;
 
 namespace Exemple
 {
@@ -20,7 +20,7 @@ namespace Exemple
         {
             var listaCosuri = citesteLista().ToArray();
             CosGol cosNevalidat = new(listaCosuri);
-            IStariCos result = ValideazaCos(cosNevalidat);
+            IStareCos result = ValideazaCos(cosNevalidat);
             result.Match(
                 whenCosGol: unvalidatedResult => cosNevalidat,
                 whenCosPlatit: publishedResult => publishedResult,
@@ -63,12 +63,12 @@ namespace Exemple
             return listaCosuri;
         }
 
-        private static IStariCos ValideazaCos(CosGol cosInvalid) =>
+        private static IStareCos ValideazaCos(CosGol cosInvalid) =>
             random.Next(100) > 50 ?
             new CosNevalidat(new List<StareInvalid>(), "Random errror")
             : new CosValidat(new List<StareValid>());
 
-        private static IStariCos PublishExamGrades(CosValidat cosValidat) =>
+        private static IStareCos PublishExamGrades(CosValidat cosValidat) =>
             new CosPlatit(new List<StareValid>(), DateTime.Now);
 
         private static string? ReadValue(string prompt)
