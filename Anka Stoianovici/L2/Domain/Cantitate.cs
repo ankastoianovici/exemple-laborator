@@ -1,22 +1,25 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Linq;
 
 namespace L2.Domain
 {
-    public record Adresa
+    public record Cantitate
     {
-        public string Value { get; }
-        public Adresa (string value)
+        public int Value { get; }
+
+        public Cantitate(int value)
         {
-            Value=value;
+            Value = value;
+            
         }
+
+
         public override string ToString()
         {
-            return Value;
+            return $"{Value:0.##}";
         }
     }
-    
 }
