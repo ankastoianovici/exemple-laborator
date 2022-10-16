@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Text;
+using System.Linq;
 
 namespace L2.Domain
 {
@@ -12,11 +12,9 @@ namespace L2.Domain
 
         public Cantitate(int value)
         {
-            Value = value;
-            
+            Value = value; 
         }
-
-
+        
         public override string ToString()
         {
             return $"{Value:0.##}";
