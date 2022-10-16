@@ -8,16 +8,16 @@ using System.Linq;
 namespace L2.Domain
 {
     [AsChoice]
-    public static partial class StariCos
+    public static partial class StareCos
     {
-        public interface IStariCos { }
+        public interface IStareCos { }
 
-        public record CosGol(IReadOnlyCollection<StareInvalid> ListaCos) : IStariCos;
+        public record CosGol(IReadOnlyCollection<StareInvalid> ListaCos) : IStareCos;
 
-        public record CosNevalidat(IReadOnlyCollection<StareInvalid> ListaCos, string reason) : IStariCos;
+        public record CosNevalidat(IReadOnlyCollection<StareInvalid> ListaCos, string reason) : IStareCos;
 
-        public record CosValidat(IReadOnlyCollection<StareValid> ListaCos) : IStariCos;
+        public record CosValidat(IReadOnlyCollection<StareValid> ListaCos) : IStareCos;
 
-        public record CosPlatit(IReadOnlyCollection<StareValid> ListaCos, DateTime PublishedDate) : IStariCos;
+        public record CosPlatit(IReadOnlyCollection<StareValid> ListaCos, DateTime PublishedDate) : IStareCos;
     }
 }
