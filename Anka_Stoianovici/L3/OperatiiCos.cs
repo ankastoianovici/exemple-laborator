@@ -71,7 +71,7 @@ namespace L3
             whenCosValidat: cosValidat =>
             {
                 var cosCalculat = cosValidat.ListaCos.Select(valid =>
-                                            new StareCalculat(valid.cod,
+                                            new Calcul(valid.cod,
                                                               valid.cantitate,
                                                               valid.adresa,
                                                               valid.pret * valid.cantitate
