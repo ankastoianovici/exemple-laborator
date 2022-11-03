@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using static L2.Domain.StareCos;
 
-namespace Exemple
+namespace L2
 {
     class Program
     {
